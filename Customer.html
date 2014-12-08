@@ -1,11 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Untitled Document</title>
   <script src="scripts.js"></script>
 
-<link href="css.css" rel="stylesheet" type="text/css" />
+  <link href="css.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="onloading()">
@@ -26,41 +26,46 @@
       <li></li>
       <li></li>
       <li></li>
-      <li><a href="#">Add Credit</a><p><input type = "text" id="creditsbox" placeholder="Enter amount"></input><p>
-        <button type="button" onClick="onClick()">Click to add credits</button>
-        <p>Credits: <a id="credits">0</a></p></li>
-      <li><a href="#" onclick="addBeerTab()" >Add Beer to tab</a></li>
-     <!-- <li><a href="#"  onclick= "window.open('TabPopUp.html', 'pop', 'height=x, width=y, top=z, left=t, resible=no');">See Tab</a></li>-->
-      <li><a href="#" onclick="tab_box()" >See Tab</a></li>
       <li><a href="#">Check out</a></li>
       <li><a href="login.html" onclick="logout()">Log Out</a></li>
     </ul>
     <p>&nbsp;</p>
   </div>
-  <div class="content">
-
+  <div class="content; float: left">
     <h1>Beers</h1>
     <p>Please choose a Beer :</p>
+    <div style="float: left">
+    <div id="test"></div></div>
+    <table style="width:15%">
+    <div style="float: left">
+      <li><a href="#">Add Credit</a><p><input type = "text" id="creditsbox" placeholder="Enter amount"></input><p>
+        <button type="button" onClick="onClick()">Click to add credits</button>
+        <p>Credits: <a id="credits">0</a></p></li>
+      <li><a href="#" onclick="addBeerTab()" >Add Beer to tab</a></li>
+      <!-- <li><a href="#"  onclick= "window.open('TabPopUp.html', 'pop', 'height=x, width=y, top=z, left=t, resible=no');">See Tab</a></li>-->
+      <li><a href="#" onclick="tab_box()" >See Tab</a></li>
+    </table>
 
-    <div id="test"></div>
+      <p style="clear: both">
+      <p>
+        <label>Search
+          <input type="text" name="Search" id="Search" value="" />
+        </label>
+      </p>
+      <p class="submit"><input type="submit" name="commit" value="Search" onclick="search_beer()">
+      </p>
+      </br>
 
-  </br>
-
+      <div id = "search_result"></div>
+      </p>
+    </div>
+    </br>
     <div id="tab"></div>
 
     </br>
 
-    <p>
-      <label>Search
-        <input type="text" name="Search" id="Search" value="" />
-      </label>
-    </p>
-    <p class="submit"><input type="submit" name="commit" value="Search" onclick="search_beer()">
-    </p>
-    </br>
 
-    <div id = "search_result"></div>
-  <!-- end .content --></div>
+    <!-- end .content --></div>
   <div class="footer">
     <p>Copyright The Beer Pub Group 1 GUI</p>
     <!-- end .footer --></div>
